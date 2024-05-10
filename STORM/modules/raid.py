@@ -50,7 +50,7 @@ async def raid(x: Client, message: Message):
                 reply = choice(RAID)
                 msg = f"{mention} {reply}"
                 await x.send_message(message.chat.id, msg)
-                await asyncio.sleep(0.3)
+                await asyncio.sleep(0.1)
 
     elif message.reply_to_message and (len(kex) == 2):
         user_id = message.reply_to_message.from_user.id
@@ -70,7 +70,7 @@ async def raid(x: Client, message: Message):
                 reply = choice(RAID)
                 msg = f"{mention} {reply}"
                 await x.send_message(message.chat.id, msg)
-                await asyncio.sleep(0.3)
+                await asyncio.sleep(0.1)
 
     else:
         await message.reply_text(".ʀᴀɪᴅ 10 <ᴜꜱᴇʀɴᴀᴍᴇ ᴏꜰ ᴜꜱᴇʀ> <ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜꜱᴇʀ>")
