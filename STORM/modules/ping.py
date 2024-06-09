@@ -37,4 +37,3 @@ async def ping(_, e: Message):
       end = datetime.datetime.now()
       ms = (end-start).microseconds / 10000
       await Fuk.edit_text(f"**❏ ꜱ ᴛ ᴏ ʀ ᴍ 🥀**\n**├• ᴛʜᴇ ᴄᴀʟᴍ ʙᴇꜰᴏʀᴇ ᴛʜᴇ ꜱᴛᴏʀᴍ ⚡**\n**└•** `{ms} ᴍꜱ`")
-
