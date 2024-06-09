@@ -17,6 +17,6 @@ lyricsgenius
 telegraph
 wget
 youtube-search-python
-yt-dlp -U
+yt-dlp
 pyrogram==2.0.105
 openai==0.28
