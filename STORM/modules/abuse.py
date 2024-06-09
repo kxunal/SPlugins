@@ -41,7 +41,6 @@ async def abuse(x: Client, e: Message):
             reply = choice(ABUSE)
             msg = f"[{ok.first_name}](tg://user?id={ok.id}) {reply}"
             await x.send_message(e.chat.id, msg)
-            await asyncio.sleep(0.1)
 
     elif e.reply_to_message:
         user_id = e.reply_to_message.from_user.id
