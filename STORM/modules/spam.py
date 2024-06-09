@@ -44,12 +44,10 @@ async def spam(client: Client, message: Message):
             id = message.reply_to_message_id
             for _ in range(quantity):
                 await message.reply_text(spam_text, reply_to_message_id=id)
-                await asyncio.sleep(0.3)
         else:
             cid = message.chat.id
             for _ in range(quantity):
                 await client.send_message(cid, spam_text)
-                await asyncio.sleep(0.3)
 
     elif message.reply_to_message:
         spam_text = message.reply_to_message.text
@@ -57,8 +55,6 @@ async def spam(client: Client, message: Message):
         cid = message.chat.id
         for _ in range(quantity):
             await client.send_message(cid, spam_text)
-            await asyncio.sleep(0.3)
-
     else:
         await message.reply_text(f"!ꜱᴘᴀᴍ 13 <ʀᴇᴘʟʏ ᴛᴏ ᴛᴇxᴛ> <ʏᴏᴜʀ ᴛᴇxᴛ> <ʀᴇᴘʟʏ ᴛᴏ ᴜꜱᴇʀ>")
 
@@ -78,7 +74,6 @@ async def pspam(client: Client, message: Message):
         for _ in range(quantity):
             porm = choice(PORM)
             await client.send_video(cid, porm)
-            await asyncio.sleep(0.3)
     else:
         await message.reply_text(f"!ᴘꜱᴘᴀᴍ 13")
 
@@ -99,4 +94,3 @@ async def hang(xspam: Client, message: Message):
     chat_id = message.chat.id
     for _ in range(count):
          await xspam.send_message(chat_id, hero)
-         await asyncio.sleep(0.3)
