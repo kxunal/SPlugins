@@ -41,7 +41,6 @@ FIRST_TEXT = f"""
 **» ʀᴀɪᴅ/ꜱᴘᴀᴍ ᴄᴏᴍᴍᴀɴᴅꜱ:** `{hl}helpspam` 
 **» ᴘᴍ ᴄᴏᴍᴍᴀɴᴅꜱ:** `{hl}helppm`
 **» ʟᴏᴠᴇ ᴄᴏᴍᴍᴀɴᴅꜱ:** `{hl}helplove`
-**» ꜰᴜɴ ᴄᴏᴍᴍᴀɴᴅꜱ:** `{hl}helpfun`
 **» ɪɴᴛᴇʀɴᴇᴛ ᴄᴏᴍᴍᴀɴᴅꜱ:** `{hl}helpinternet`
 **» ᴄᴏɴᴠᴇʀᴛ ᴄᴏᴍᴍᴀɴᴅꜱ:** `{hl}helpconvert`
 **» ɪɴꜰᴏ ᴄᴏᴍᴍᴀɴᴅꜱ:** `{hl}helpinfo`
@@ -50,6 +49,8 @@ FIRST_TEXT = f"""
 **» ᴡɪꜱʜ ᴄᴏᴍᴍᴀɴᴅꜱ:** `{hl}helpwish`
 **» ꜰ-ᴀᴄᴛɪᴏɴ ᴄᴏᴍᴍᴀɴᴅꜱ:** `{hl}helpfaction`
 **» ᴠᴄ ᴄᴏᴍᴍᴀɴᴅꜱ:** `{hl}helpvc`
+**» ꜰᴜɴ ᴄᴏᴍᴍᴀɴᴅꜱ:** `{hl}helpfun`
+**» ꜰᴜɴ ᴄᴏᴍᴍᴀɴᴅꜱ 2:** `{hl}helpfuntwo`
 """
 
 @Client.on_message(
