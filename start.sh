@@ -20,14 +20,9 @@
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #SOFTWARE.
 
-#! /bin/bash
+#!/bin/bash
 
-echo "      _____  ____    ____   _______   "
-echo "     / ____||  _ \  / __ \ |__   __|  "
-echo "     | (___ | |_) || |  | |   | |     "
-echo "     \___ \ |  _ < | |  | |   | |     "
-echo "     ____) || |_) || |__| |   | |     "
-echo "    |_____/ |____/  \____/    |_|     "
-echo "                                      "
-
-python3 server.py & python3 STORM.py
+set -e
+export FLASK_APP=anu:create_app
+gunicorn -w 4 -b 0.0.0.0:${PORT:-8080} anu:create_app &
+python3 STORM.py
