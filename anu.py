@@ -25,7 +25,6 @@ import logging
 from flask import Flask
 from flask_restful import Resource, Api
 
-# Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -33,7 +32,6 @@ def create_app():
     app = Flask(__name__)
     api = Api(app)
 
-    # Define a simple resource
     class Greeting(Resource):
         def get(self):
             logger.info("ɢʀᴇᴇᴛɪɴɢ ᴇɴᴅᴘᴏɪɴᴛ ᴡᴀꜱ ʀᴇᴀᴄʜᴇᴅ")
