@@ -27,14 +27,14 @@ from STORM.helper.basic import edit_or_reply, get_text, get_user
 from config import SUDO_USERS
 
 OWNER = os.environ.get("OWNER", None)
-BIO = os.environ.get("BIO", "404 : Bio Lost")
+BIO = os.environ.get("BIO", "@STORM_CHATZ")
 
 @Client.on_message(
     filters.command(["clone"], ".") & (filters.me | filters.user(SUDO_USERS))
 )
 async def clone(client: Client, message: Message):
     text = get_text(message)
-    op = await message.edit_text("ᴄʟᴏɴɪɴɢ.....")
+    op = await edit_or_reply(message, "ᴄʟᴏɴɪɴɢ....")
     userk = get_user(message, text)[0]
     user_ = await client.get_users(userk)
     if not user_:
@@ -54,11 +54,12 @@ async def clone(client: Client, message: Message):
     )
     await message.edit(f"**ɴᴏᴡ ɪ'ᴍ** {f_name}")
 
+
 @Client.on_message(
     filters.command(["revert"], ".") & (filters.me | filters.user(SUDO_USERS))
 )
 async def revert(client: Client, message: Message):
-    await message.edit("ʀᴇᴠᴇʀᴛɪɴɢ......")
+    await message.edit("ʀᴇᴠᴇʀᴛɪɴɢ....")
     r_bio = BIO
 
     await client.update_profile(
