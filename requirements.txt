@@ -21,4 +21,4 @@ yt-dlp==2024.5.27
 pyrogram==2.0.105
 openai==0.28
 gunicorn
-py-tgcalls==0.9.7
+py-tgcalls
