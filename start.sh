@@ -1,28 +1,20 @@
-#MIT License
-
-#Copyright (c) 2024 ᴋᴜɴᴀʟ [AFK]
-
-#Permission is hereby granted, free of charge, to any person obtaining a copy
-#of this software and associated documentation files (the "Software"), to deal
-#in the Software without restriction, including without limitation the rights
-#to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-#copies of the Software, and to permit persons to whom the Software is
-#furnished to do so, subject to the following conditions:
-
-#The above copyright notice and this permission notice shall be included in all
-#copies or substantial portions of the Software.
-
-#THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-#IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-#FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-#AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-#LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-#OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-#SOFTWARE
-
 #!/bin/bash
 
 set -e
+
+echo "ᴘᴏʀᴛ ɪꜱ ɴᴏᴛ ꜱᴇᴛ. [ꜱᴛᴏʀᴍ ᴀɪ] ɪꜱ ᴅᴇꜰᴀᴜʟᴛɪɴɢ ᴛᴏ 8080 🌐"
 export FLASK_APP=anu:create_app
-gunicorn -w 4 -b 0.0.0.0:${PORT:-8080} anu:create_app &
-python3 boot.py
+echo "ꜰʟᴀꜱᴋ ᴀᴘᴘ ɪꜱ ɴᴏᴛ ꜱᴇᴛ. [ꜱᴛᴏʀᴍ ᴀɪ] ɪꜱ ᴅɪʀᴇᴄᴛʟʏ ʙᴏᴏᴛɪɴɢ ᴛᴏ ɪᴛꜱ ꜱᴇʀᴠᴇʀ ꜰʟᴀꜱᴋ ⚡: $FLASK_APP"
+
+echo "ɪɢɴɪᴛɪɴɢ ɢᴜɴɪᴄᴏʀɴ ᴡɪᴛʜ 4 ᴛᴜʀʙᴏ-ᴄʜᴀʀɢᴇᴅ ᴡᴏʀᴋᴇʀꜱ ᴏɴ ᴘᴏʀᴛ 🌐 ${PORT:-8080}..."
+gunicorn --workers 4 --bind 0.0.0.0:${PORT:-8080} anu:create_app &
+echo "🚀 ɢᴜɴɪᴄᴏʀɴ ɪꜱ ʟɪᴠᴇ ᴀɴᴅ ᴋɪᴄᴋɪɴɢ ᴡɪᴛʜ ᴘɪᴅ:: $!"
+
+echo "⚡ ɪɴɪᴛɪᴀᴛɪɴɢ ᴛʜᴇ ꜱʏꜱᴛᴇᴍ ʙᴏᴏᴛ ꜱᴇQᴜᴇɴᴄᴇ ᴡɪᴛʜ ᴘʏᴛʜᴏɴ..."
+python3 boot.py &
+echo "ʙᴏᴏᴛ ꜱᴄʀɪᴘᴛ ɪꜱ ʟɪᴠᴇ ᴡɪᴛʜ ᴘɪᴅ $!"
+
+echo "🔄 ᴀᴡᴀɪᴛɪɴɢ ɢᴜɴɪᴄᴏʀɴ ᴀɴᴅ ʙᴏᴏᴛ ꜱᴄʀɪᴘᴛ ᴛᴏ ꜰɪɴɪꜱʜ..."
+wait
+
+echo "✅ ᴀʟʟ ꜱʏꜱᴛᴇᴍꜱ ᴀʀᴇ ɢᴏ ᴀɴᴅ ʀᴇᴀᴅʏ ꜰᴏʀ ʟᴀᴜɴᴄʜ!"
