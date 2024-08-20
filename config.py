@@ -2,7 +2,6 @@ from os import getenv
 from STORMDB.data import STORMS
 from dotenv import load_dotenv
 
-# Invalid/Placeholder values to disable functionality
 API_ID = int("00000000")
 API_HASH = "invalid_hash"
 SESSION1 = "invalid_session"
